@@ -20,7 +20,7 @@ class Vision{
         EnemyPosition::position enemy_position, latest_enemy_position;
 
         Vision();
-        void updateEnemyPosition(DigitalSensor &full_left, DigitalSensor &left, DigitalSensor &full_right, DigitalSensor &right, DigitalSensor &front);        
+        void updateEnemyPosition(DigitalSensor &front, DigitalSensor &full_left, DigitalSensor &left, DigitalSensor &full_right, DigitalSensor &right);        
 };
 
 #endif

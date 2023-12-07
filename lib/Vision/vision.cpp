@@ -7,7 +7,7 @@ Vision::Vision(){
     this-> latest_enemy_position = 0;
 };
 
-void Vision::updateEnemyPosition(DigitalSensor &full_left, DigitalSensor &left, DigitalSensor &full_right, DigitalSensor &right, DigitalSensor &front){
+void Vision::updateEnemyPosition(DigitalSensor &front, DigitalSensor &full_left, DigitalSensor &left, DigitalSensor &full_right, DigitalSensor &right){
     if(front.state){
         this->enemy_position = EnemyPosition::FRONT;
         this->latest_enemy_position = EnemyPosition::FRONT;
