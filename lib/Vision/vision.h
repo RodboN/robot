@@ -6,13 +6,13 @@
 namespace EnemyPosition{
     enum position{
         FULL_LEFT,
-        LEFT;
-        FULL_RIGHT;
-        RIGHT;
-        FRONT;
-        //SEARCH_LEFT,
-        //SERACH_RIGHT
-    }
+        LEFT,
+        FULL_RIGHT,
+        RIGHT,
+        FRONT,
+        SEARCH_LEFT,
+        SERACH_RIGHT
+    };
 }
 
 class Vision{
@@ -21,6 +21,6 @@ class Vision{
 
         Vision();
         void updateEnemyPosition(DigitalSensor &full_left, DigitalSensor &left, DigitalSensor &full_right, DigitalSensor &right, DigitalSensor &front);        
-}
+};
 
 #endif
