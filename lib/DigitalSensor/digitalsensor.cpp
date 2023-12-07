@@ -1,14 +1,10 @@
-#ifndef DIGITALSENSOR_H
-#define DIGITALSENSOR_H
+#include <Arduino.h>
+#include "digitalsensor.h"
 
-class DigitalSensor{
-    public:
-        int pin;
-        bool state;
-
-        DigitalSensor(int pin);
-
-        void readDigitalSensor();
+DigitalSensor::DigitalSensor(int pin){
+    this->pin = pin;
 };
 
-#endif
+void DigitalSensor::readDigitalSensor(){
+    this->state = digitalRead(pin);
+}
