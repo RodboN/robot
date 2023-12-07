@@ -2,14 +2,14 @@
 #include "microstart.h"
 
 Start::Start(int inputPin){
-    this->inputPin = inputPin;
+    this->inputPin = startSate::STOP;
 };
 
 void Start::updateStartState(){
-    if(digitalRead(inputPin) == 1){
-        this->state = startSate::sState::START;
+    if(digitalRead(inputPin)){
+        this->state = startSate::START;
     }
-    else if(!digitalRead(inputPin) == 0){
-        this->state = startSate::sState::STOP;
+    else{
+        this->state = startSate::STOP;
     }
 }
