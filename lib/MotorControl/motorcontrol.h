@@ -18,7 +18,7 @@ class MotorControl{
 
         MotorControl(int pwm_pin, int inpin_1, int inpin_2, float speed_const, int channel);
 
-        void setpower(int power);
+        void setpower(int power); 
 };
 
 #endif
