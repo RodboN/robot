@@ -6,5 +6,5 @@ DigitalSensor::DigitalSensor(int pin){
 };
 
 void DigitalSensor::readDigitalSensor(){
-    this->state = digitalRead(pin);
+    this->state = digitalRead(this->pin);
 }

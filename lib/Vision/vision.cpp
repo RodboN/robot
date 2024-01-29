@@ -3,8 +3,8 @@
 #include "digitalsensor.h"
 
 Vision::Vision(){
-    this-> enemy_position = 0;
-    this-> latest_enemy_position = 0;
+    this-> enemy_position = EnemyPosition::FRONT;
+    this-> latest_enemy_position = EnemyPosition::FRONT;
 };
 
 void Vision::updateEnemyPosition(DigitalSensor &front, DigitalSensor &full_left, DigitalSensor &left, DigitalSensor &full_right, DigitalSensor &right){
