@@ -1,7 +1,7 @@
 #ifndef VISION_H
 #define VISION_H
 
-#include "digitalsensor.h"
+#include "digital_sensor.h"
 
 namespace EnemyPosition{
     enum position{

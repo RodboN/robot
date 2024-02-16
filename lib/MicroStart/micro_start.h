@@ -1,5 +1,5 @@
-#ifndef MICROSTART_H
-#define MICROSTART_H
+#ifndef MICRO_START_H
+#define MICRO_START_H
 
 namespace startSate{
     enum sState{

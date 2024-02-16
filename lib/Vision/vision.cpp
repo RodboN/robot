@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include "vision.h"
-#include "digitalsensor.h"
+#include "digital_sensor.h"
 
 Vision::Vision(){
     this-> enemy_position = EnemyPosition::FRONT;
@@ -11,22 +11,29 @@ void Vision::updateEnemyPosition(DigitalSensor &front, DigitalSensor &full_left,
     if(front.state){
         this->enemy_position = EnemyPosition::FRONT;
         this->latest_enemy_position = EnemyPosition::FRONT;
+        return;
     } else if(full_left.state){
         this->enemy_position = EnemyPosition::FULL_LEFT;
         this->latest_enemy_position = EnemyPosition::LEFT;
+        return;
     } else if(left.state){
         this->enemy_position = EnemyPosition::LEFT;
         this->latest_enemy_position = EnemyPosition::LEFT;
+        return;
     } else if(full_right.state){
         this->enemy_position = EnemyPosition::FULL_RIGHT;
         this->latest_enemy_position = EnemyPosition::RIGHT;
+        return;
     } else if(right.state){
         this->enemy_position = EnemyPosition::RIGHT;
         this->latest_enemy_position = EnemyPosition::RIGHT;
+        return;
     } else if(latest_enemy_position == EnemyPosition::FULL_LEFT){
-        this->enemy_position = EnemyPosition::position::SEARCH_LEFT; 
+        this->enemy_position = EnemyPosition::position::SEARCH_LEFT;
+        return;
     } else if(latest_enemy_position == EnemyPosition::FULL_RIGHT){
         this->enemy_position = EnemyPosition::SERACH_RIGHT;
+        return;
     }
 }
 

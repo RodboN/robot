@@ -2,16 +2,14 @@
 #define STRATEGY_H
 
 #include "vision.h"
-#include "motorcontrol.h"
+#include "motor_control.h"
 
 
 class AutoStrategy{
     public:
-        int leftMotor_pwr;
-        int rightMotor_pwr;
 
         AutoStrategy::AutoStrategy();
-        void updateMotors(Vision &vision, MotorControl &inpin_1, MotorControl &inpin_2);
+        void updateMotors(Vision &vision, MotorControl &left_motor, MotorControl &right_motor);
 };
 
 #endif 

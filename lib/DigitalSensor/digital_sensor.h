@@ -1,5 +1,5 @@
-#ifndef DIGITALSENSOR_H
-#define DIGITALSENSOR_H
+#ifndef DIGITAL_SENSOR_H
+#define DIGITAL_SENSOR_H
 
 class DigitalSensor{
     public:

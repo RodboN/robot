@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <iostream>
-#include "motorcontrol.h"
+#include "motor_control.h"
 
 MotorConfig::MotorConfig(int pwm_pin, int inpin_1, int inpin_2, float speed_const, int channel){
     this->pwm_pin = pwm_pin;
