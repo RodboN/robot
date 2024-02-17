@@ -8,7 +8,7 @@
 class AutoStrategy{
     public:
 
-        AutoStrategy::AutoStrategy();
+        AutoStrategy();
         void updateMotors(Vision &vision, MotorControl &left_motor, MotorControl &right_motor);
 };
 
