@@ -10,10 +10,10 @@ namespace startSate{
 
 class Start{
     public:
-        int inputPin;
+        int input_pin;
         startSate::sState state;
 
-        Start(int inputPin);
+        Start(int input_pin);
         void updateStartState();
         
 };

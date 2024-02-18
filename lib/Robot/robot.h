@@ -10,25 +10,31 @@
 #include "vision.h"
 #include "strategy.h"
 
-#define FRONT_SENSOR_PIN 26
-#define FULL_RIGHT_SENSOR_PIN 25
-#define FULL_LEFT_SENSOR_PIN 13
-#define LEFT_SENSOR_PIN 35
-#define RIGHT_SENSOR_PIN 34
+/*
+modificadas nomes finais das variaveis de SENSOR_PIN para _PIN
+modificadas nomes finais das variaveis de IN1_PIN para _IN_PIN_1/2
+modificadas nomes finais das variaveis de SIGNAL_PIN para _INPUT_PIN
+*/
+
+#define FRONT_PIN 26
+#define FULL_RIGHT_PIN 25
+#define FULL_LEFT_PIN 13
+#define LEFT_PIN 35
+#define RIGHT_PIN 34
 
 #define RIGHT_MOTOR_PWM_PIN 4
-#define RIGHT_MOTOR_IN1_PIN 16
-#define RIGHT_MOTOR_IN2_PIN 17
+#define RIGHT_MOTOR_IN_PIN_1 16
+#define RIGHT_MOTOR_IN_PIN_2 17
 #define RIGHT_MOTOR_SPEED_CONST 1.0
 #define RIGHT_MOTOR_CHANNEL 0
 
 #define LEFT_MOTOR_PWM_PIN 21
-#define LEFT_MOTOR_IN1_PIN 18
-#define LEFT_MOTOR_IN2_PIN 19
+#define LEFT_MOTOR_IN_PIN_1 18 
+#define LEFT_MOTOR_IN_PIN_2 19
 #define LEFT_MOTOR_SPEED_CONST 1.0
 #define RIGHT_MOTOR_CHANNEL 1
 
-#define MICRO_START_SIGNAL_PIN 2
+#define MICRO_START_INPUT_PIN 2
 
 /*
 PINOS DEPP SWICTH
@@ -51,7 +57,7 @@ namespace Robot_State{
 class Robot{
     public:
         std::string name = "robot";
-        int led_pin = 13;
+        //int led_pin = 13;
         Robot_State::States robot_state;
         Start start;
         DigitalSensor front;

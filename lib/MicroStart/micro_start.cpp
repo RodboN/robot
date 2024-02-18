@@ -1,12 +1,12 @@
 #include <Arduino.h>
 #include "micro_start.h"
 
-Start::Start(int inputPin){
-    this->inputPin = startSate::STOP;
+Start::Start(int input_pin){
+    this->input_pin = startSate::STOP;
 };
 
 void Start::updateStartState(){
-    if(digitalRead(inputPin)){
+    if(digitalRead(input_pin)){
         this->state = startSate::START;
     }
     else{
