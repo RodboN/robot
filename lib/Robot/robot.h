@@ -9,6 +9,7 @@
 #include "motor_control.h"
 #include "vision.h"
 #include "strategy.h"
+#include "analog_sensor.h"
 
 /*
 modificadas nomes finais das variaveis de SENSOR_PIN para _PIN
@@ -32,7 +33,7 @@ modificadas nomes finais das variaveis de SIGNAL_PIN para _INPUT_PIN
 #define LEFT_MOTOR_IN_PIN_1 18 
 #define LEFT_MOTOR_IN_PIN_2 19
 #define LEFT_MOTOR_SPEED_CONST 1.0
-#define RIGHT_MOTOR_CHANNEL 1
+#define LEFT_MOTOR_CHANNEL 1
 
 #define MICRO_START_INPUT_PIN 2
 
