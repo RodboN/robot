@@ -6,8 +6,8 @@ AnalogSensor::AnalogSensor(int pin){
 };
 
 void AnalogSensor::readAnalogSensor(){
-    this->interval = analogRead(this->pin);
-    if(interval >= 0 && interval <= 0)
+    this->read_value = analogRead(this->pin);
+    if(read_value >= threshold && read_value <= threshold)
         this->state = 1;
     else
         this->state = 0;

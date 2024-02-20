@@ -3,7 +3,7 @@
 
 class AnalogSensor{
     public:
-        int pin, interval, state;
+        int pin, read_value, state, threshold;
         
         AnalogSensor(int pin);
 
