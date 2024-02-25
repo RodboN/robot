@@ -72,7 +72,7 @@ class Robot{
         MotorControl rigth_motor;
         Vision vision;
         //InitialStrategy* initial_strategy;
-        AutoStrategy* auto_strategy();
+        AutoStrategy auto_strategy;
 
         void readSensor();
         void update();

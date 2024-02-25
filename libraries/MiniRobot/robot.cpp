@@ -2,18 +2,19 @@
 #include "robot.h"
 
 
+
 Robot::Robot() : front(FRONT_PIN), 
-                    left(LEFT_PIN),
-                    right(RIGHT_PIN),
-                    full_left(FULL_LEFT_PIN),
-                    full_right(FULL_RIGHT_PIN),
-                    left_motor(LEFT_MOTOR_PWM_PIN, LEFT_MOTOR_IN_PIN_1, LEFT_MOTOR_IN_PIN_2, LEFT_MOTOR_SPEED_CONST, LEFT_MOTOR_CHANNEL),
-                    rigth_motor(RIGHT_MOTOR_PWM_PIN, RIGHT_MOTOR_IN_PIN_1, RIGHT_MOTOR_IN_PIN_2, RIGHT_MOTOR_SPEED_CONST, RIGHT_MOTOR_CHANNEL),
-                    vision(),
-                    start(STRATEGY_PIN_A, STRATEGY_PIN_B, STRATEGY_PIN_C),
-                    line_sensorLeft(LINE_SENSOR_LEFT_PIN),
-                    line_sensorRight(LINE_SENSOR_RIGHT_PIN),
-                    auto_strategy()
+                 left(LEFT_PIN),
+                 right(RIGHT_PIN),
+                 full_left(FULL_LEFT_PIN),
+                 full_right(FULL_RIGHT_PIN),
+                 left_motor(LEFT_MOTOR_PWM_PIN, LEFT_MOTOR_IN_PIN_1, LEFT_MOTOR_IN_PIN_2, LEFT_MOTOR_SPEED_CONST, LEFT_MOTOR_CHANNEL),
+                 rigth_motor(RIGHT_MOTOR_PWM_PIN, RIGHT_MOTOR_IN_PIN_1, RIGHT_MOTOR_IN_PIN_2, RIGHT_MOTOR_SPEED_CONST, RIGHT_MOTOR_CHANNEL),
+                 vision(),
+                 start(MICRO_START_INPUT_PIN),
+                 line_sensorLeft(LINE_SENSOR_LEFT_PIN),
+                 line_sensorRight(LINE_SENSOR_RIGHT_PIN),
+                 auto_strategy()
 {
     this->robot_state = Robot_State::AWAITING_START;
 }
