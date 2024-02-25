@@ -37,6 +37,9 @@ modificadas nomes finais das variaveis de SIGNAL_PIN para _INPUT_PIN
 
 #define MICRO_START_INPUT_PIN 2
 
+#define LINE_SENSOR_LEFT_PIN 66
+#define LINE_SENSOR_right_PIN 67
+
 /*
 PINOS DEPP SWICTH
 #define STRATEGY_PIN_A 22
@@ -66,6 +69,7 @@ class Robot{
         DigitalSensor left;
         DigitalSensor full_right;
         DigitalSensor right;
+        AnalogSensor  line_sensorLeft, line_sensorRight;
         MotorControl left_motor;
         MotorControl rigth_motor;
         Vision vision;

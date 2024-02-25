@@ -1,14 +1,23 @@
 #include <Arduino.h>
 #include "vision.h"
 #include "digital_sensor.h"
+#include "analog_sensor.h"
+#include "motor_control.h"
 
 Vision::Vision(){
     this-> enemy_position = EnemyPosition::FRONT;
     this-> latest_enemy_position = EnemyPosition::FRONT;
 };
 
-void Vision::updateEnemyPosition(DigitalSensor &front, DigitalSensor &full_left, DigitalSensor &left, DigitalSensor &full_right, DigitalSensor &right){
-    if(front.state){
+void Vision::updateEnemyPosition(DigitalSensor &front, DigitalSensor &full_left, DigitalSensor &left, DigitalSensor &full_right, DigitalSensor &right, AnalogSensor &line_sensorLeft, AnalogSensor &line_sensorRight){
+    
+    if(line_sensorLeft.state ){
+        this->enemy_position = EnemyPosition::LINE_LEFT;
+        return;
+    } else if (line_sensorRight.state){
+        this->enemy_position = EnemyPosition::LINE_RIGHT;
+        return;
+    }else if(front.state){
         this->enemy_position = EnemyPosition::FRONT;
         this->latest_enemy_position = EnemyPosition::FRONT;
         return;
@@ -36,4 +45,3 @@ void Vision::updateEnemyPosition(DigitalSensor &front, DigitalSensor &full_left,
         return;
     }
 }
-

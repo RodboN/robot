@@ -2,10 +2,20 @@
 #include "motor_control.h"
 #include "vision.h"
 
-AutoStrategy::AutoStrategy();
+AutoStrategy::AutoStrategy(){
+
+};
 
 void updateMotors(Vision &vision, MotorControl &left_motor, MotorControl &right_motor){
-    if(vision.enemy_position == EnemyPosition::FRONT){
+    if(vision.enemy_position == EnemyPosition::LINE_LEFT){
+        left_motor.setpower(-20);
+        right_motor.setpower(-100);
+        return;
+    }else if(vision.enemy_position == EnemyPosition::LINE_RIGHT){
+        left_motor.setpower(-100);
+        right_motor.setpower(-20);
+        return;
+    }else if(vision.enemy_position == EnemyPosition::FRONT){
         left_motor.setpower(100);
         right_motor.setpower(100);
         return;
