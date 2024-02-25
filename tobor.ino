@@ -1,4 +1,4 @@
-#include "robot.h"
+#include "MiniRobot.h"
 
 void setup() {
   
@@ -22,8 +22,8 @@ void setup() {
   pinMode(STDBY, OUTPUT);
   digitalWrite(STDBY, HIGH);
 
-  pinMode(LINE_SENSOR_LEFT_PIN, INPUT),
-  pinMode(LINE_SENSOR_RIGHT_PIN, INPUT),
+  pinMode(LINE_SENSOR_LEFT_PIN, INPUT);
+  pinMode(LINE_SENSOR_RIGHT_PIN, INPUT);
 
   ledcAttachPin(RIGHT_MOTOR_PWM_PIN, RIGHT_MOTOR_CHANNEL);
   ledcSetup(RIGHT_MOTOR_CHANNEL, 12000, 8);

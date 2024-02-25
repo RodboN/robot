@@ -1,7 +1,6 @@
 #include <Arduino.h>
 #include "robot.h"
-#include "digital_sensor.h"
-#include "vision.h"
+
 
 Robot::Robot() : front(FRONT_PIN), 
                     left(LEFT_PIN),
@@ -12,11 +11,12 @@ Robot::Robot() : front(FRONT_PIN),
                     rigth_motor(RIGHT_MOTOR_PWM_PIN, RIGHT_MOTOR_IN_PIN_1, RIGHT_MOTOR_IN_PIN_2, RIGHT_MOTOR_SPEED_CONST, RIGHT_MOTOR_CHANNEL),
                     vision(),
                     start(),
-                    line_sensor1(),
-                    line_sensor2(),
-                    auto_strategy();
-
-{this->robot_state = Robot_State::AWAITING_START;}
+                    line_sensorLeft(LINE_SENSOR_LEFT_PIN),
+                    line_sensorRight(LINE_SENSOR_RIGHT_PIN),
+                    auto_strategy()
+{
+    this->robot_state = Robot_State::AWAITING_START;
+}
 
 void Robot::readSensor(){
     this->line_sensorLeft.readAnalogSensor();

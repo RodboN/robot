@@ -37,8 +37,8 @@ modificadas nomes finais das variaveis de SIGNAL_PIN para _INPUT_PIN
 
 #define MICRO_START_INPUT_PIN 2
 
-#define LINE_SENSOR_LEFT_PIN 66
-#define LINE_SENSOR_right_PIN 67
+#define LINE_SENSOR_LEFT_PIN 30
+#define LINE_SENSOR_RIGHT_PIN 31
 
 /*
 PINOS DEPP SWICTH
