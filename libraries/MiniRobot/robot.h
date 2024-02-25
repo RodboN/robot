@@ -40,12 +40,10 @@ modificadas nomes finais das variaveis de SIGNAL_PIN para _INPUT_PIN
 #define LINE_SENSOR_LEFT_PIN 30
 #define LINE_SENSOR_RIGHT_PIN 31
 
-/*
-PINOS DEPP SWICTH
 #define STRATEGY_PIN_A 22
 #define STRATEGY_PIN_B 23
 #define STRATEGY_PIN_C 14
-*/
+
 
 #define STDBY 5
 
@@ -74,7 +72,7 @@ class Robot{
         MotorControl rigth_motor;
         Vision vision;
         //InitialStrategy* initial_strategy;
-        AutoStrategy auto_strategy;
+        AutoStrategy* auto_strategy();
 
         void readSensor();
         void update();
