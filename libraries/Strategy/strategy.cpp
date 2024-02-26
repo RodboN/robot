@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include "motor_control.h"
 #include "vision.h"
+#include "strategy.h"
 
 AutoStrategy::AutoStrategy(){};
 
