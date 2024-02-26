@@ -5,7 +5,7 @@
 
 AutoStrategy::AutoStrategy(){};
 
-void updateMotors(Vision &vision, MotorControl &left_motor, MotorControl &right_motor){
+void AutoStrategy::updateMotors(Vision &vision, MotorControl &left_motor, MotorControl &right_motor){
     if(vision.enemy_position == EnemyPosition::LINE_LEFT){
         left_motor.setpower(-20);
         right_motor.setpower(-100);
