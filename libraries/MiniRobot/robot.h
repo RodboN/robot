@@ -69,7 +69,7 @@ class Robot{
         DigitalSensor right;
         AnalogSensor  line_sensorLeft, line_sensorRight;
         MotorControl left_motor;
-        MotorControl rigth_motor;
+        MotorControl right_motor;
         Vision vision;
         //InitialStrategy* initial_strategy;
         AutoStrategy auto_strategy;
